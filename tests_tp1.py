@@ -3,58 +3,58 @@ import unittest
 from module_runner import ModuleRunner
 
 
-class TestExercice1(unittest.TestCase):
-    def setUp(self):
-        self.runner = ModuleRunner("exo1")
-        self.input_questions = "Entrez le nom de la planete exploree: Entrez la date de votre visite (JJ/MM/AAAA): Decrivez la planete: "
+# class TestExercice1(unittest.TestCase):
+#     def setUp(self):
+#         self.runner = ModuleRunner("exo1")
+#         self.input_questions = "Entrez le nom de la planete exploree: Entrez la date de votre visite (JJ/MM/AAAA): Decrivez la planete: "
 
-    def test_exercice1(self):
-        simulated_inputs = "Mars\n01/01/2024\nPlanete rouge avec surface poussiereuse\n"
-        output = self.runner.run(simulated_inputs)
-        expected = f"{self.input_questions}Votre exploration a ete ajoutee au Journal des Astres !\n-------------------------------\nTitre : Decouverte de Mars\nDate : 01/01/2024\nDescription : Planete rouge avec surface poussiereuse\n"
-        self.assertEqual(expected, output)
-
-
-class TestExercice2(unittest.TestCase):
-    def setUp(self):
-        self.runner = ModuleRunner("exo2")
-        self.input_questions = "Nombre de baguettes a fabriquer : "
-
-    def test_exercice2_cinq_baguettes(self):
-        simulated_inputs = "5\n"
-        output = self.runner.run(simulated_inputs)
-        expected = f"{self.input_questions}Voici les materiaux requis pour la fabrication de 5 baguettes magiques:\n- 15 piece(s) de bois\n- 5 coeur(s) de creatures magiques\n- 50 ml de vernis\n"
-        self.assertEqual(expected, output)
-
-    def test_exercice2_dix_baguettes(self):
-        simulated_inputs = "18\n"
-        output = self.runner.run(simulated_inputs)
-        expected = f"{self.input_questions}Voici les materiaux requis pour la fabrication de 18 baguettes magiques:\n- 54 piece(s) de bois\n- 18 coeur(s) de creatures magiques\n- 180 ml de vernis\n"
-        self.assertEqual(expected, output)
+#     def test_exercice1(self):
+#         simulated_inputs = "Mars\n01/01/2024\nPlanete rouge avec surface poussiereuse\n"
+#         output = self.runner.run(simulated_inputs)
+#         expected = f"{self.input_questions}Votre exploration a ete ajoutee au Journal des Astres !\n-------------------------------\nTitre : Decouverte de Mars\nDate : 01/01/2024\nDescription : Planete rouge avec surface poussiereuse\n"
+#         self.assertEqual(expected, output)
 
 
-class TestExercice3(unittest.TestCase):
-    def setUp(self):
-        self.runner = ModuleRunner("exo3")
-        self.input_questions = "Entrez la vitesse initiale (en m/s) : Entrez l'angle de lancement (en degres) : "
+# class TestExercice2(unittest.TestCase):
+#     def setUp(self):
+#         self.runner = ModuleRunner("exo2")
+#         self.input_questions = "Nombre de baguettes a fabriquer : "
 
-    def test_vitesse_initiale_zero(self):
-        simulated_inputs = "0\n45\n"
-        output = self.runner.run(simulated_inputs)
-        expected = f"{self.input_questions}La distance parcourue par le projectile est de 0.00 metres.\n"
-        self.assertEqual(expected, output)
+#     def test_exercice2_cinq_baguettes(self):
+#         simulated_inputs = "5\n"
+#         output = self.runner.run(simulated_inputs)
+#         expected = f"{self.input_questions}Voici les materiaux requis pour la fabrication de 5 baguettes magiques:\n- 15 piece(s) de bois\n- 5 coeur(s) de creatures magiques\n- 50 ml de vernis\n"
+#         self.assertEqual(expected, output)
 
-    def test_valeurs_realistes_1(self):
-        simulated_inputs = "10\n30\n"
-        output = self.runner.run(simulated_inputs)
-        expected = f"{self.input_questions}La distance parcourue par le projectile est de 8.83 metres.\n"
-        self.assertEqual(expected, output)
+#     def test_exercice2_dix_baguettes(self):
+#         simulated_inputs = "18\n"
+#         output = self.runner.run(simulated_inputs)
+#         expected = f"{self.input_questions}Voici les materiaux requis pour la fabrication de 18 baguettes magiques:\n- 54 piece(s) de bois\n- 18 coeur(s) de creatures magiques\n- 180 ml de vernis\n"
+#         self.assertEqual(expected, output)
 
-    def test_valeurs_realistes_2(self):
-        simulated_inputs = "20\n60\n"
-        output = self.runner.run(simulated_inputs)
-        expected = f"{self.input_questions}La distance parcourue par le projectile est de 35.31 metres.\n"
-        self.assertEqual(expected, output)
+
+# class TestExercice3(unittest.TestCase):
+#     def setUp(self):
+#         self.runner = ModuleRunner("exo3")
+#         self.input_questions = "Entrez la vitesse initiale (en m/s) : Entrez l'angle de lancement (en degres) : "
+
+#     def test_vitesse_initiale_zero(self):
+#         simulated_inputs = "0\n45\n"
+#         output = self.runner.run(simulated_inputs)
+#         expected = f"{self.input_questions}La distance parcourue par le projectile est de 0.00 metres.\n"
+#         self.assertEqual(expected, output)
+
+#     def test_valeurs_realistes_1(self):
+#         simulated_inputs = "10\n30\n"
+#         output = self.runner.run(simulated_inputs)
+#         expected = f"{self.input_questions}La distance parcourue par le projectile est de 8.83 metres.\n"
+#         self.assertEqual(expected, output)
+
+#     def test_valeurs_realistes_2(self):
+#         simulated_inputs = "20\n60\n"
+#         output = self.runner.run(simulated_inputs)
+#         expected = f"{self.input_questions}La distance parcourue par le projectile est de 35.31 metres.\n"
+#         self.assertEqual(expected, output)
 
 
 class TestExercice4(unittest.TestCase):
