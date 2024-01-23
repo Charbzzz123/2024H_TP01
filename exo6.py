@@ -24,7 +24,7 @@ if 0<=niveau_charge<=100:
         
     h=Time//60
     m=Time%60
-    print("Temps restant :","%01dh%02dmin" % (h, m) )
+    print(" Temps restant :","%01dh%02dmin" % (h, m) )
     4
 else:
-    print("Erreur : niveau de charge invalide.")
+    print(" Erreur : niveau de charge invalide.")
